@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagens Aereas</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div class="content">
+        <h1>Comprar Passagens</h1>
+
+        <label for="cmdPartida">Partida:</label>
+        <select id="cmbPartida">
+            <option value="Uberlândia">Uberlândia</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+        </select>
+
+        <label for="cmdDestino">Destino:</label>
+        <select id="cmbDestino">
+            <option value="Uberlândia">Uberlândia</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+        </select>
+
+        <label for="txtAdultos">Adultos:</label>
+        <input type="number" min="0" max="5" value="0" id="txtAdultos" />
+
+        <label for="txtCriancas">Crianças:</label>
+        <input type="number" min="0" max="5" value="0" id="txtCriancas" />
+
+        <label for="txtBebes">Bebês:</label>
+        <input type="number" min="0" max="5" value="0" id="txtBebes" />
+
+        <label for="chkIdaVolta">
+            <input type="checkbox" id="chkIdaVolta" /> Ida e Volta
+        </label>
+
+        <button id="btnOrcamento">Realizar Orçamento</button>
+    </div>
+
+    <div class="content">
+        <h1>Valores</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

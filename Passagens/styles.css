@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 400px;
+    min-width: 300px;
+    border: 2px solid #CCCCCC;
+    border-radius: 1em;
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+label, select, button, input {
+    display: block;
+}
+input[type=checkbox] {
+    display: inline;
+}
+label {
+    margin-top: 0.5em;
+}
+
+select, input:not([type=checkbox]) {
+    width: 100%;
+    padding: 0.8em 1em;
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.8em 1em;
+    font-weight: bold;
+    background-color: #333333;
+    color: #DDDDDD;
+    border: none;
+    border-radius: 4px;
+}
