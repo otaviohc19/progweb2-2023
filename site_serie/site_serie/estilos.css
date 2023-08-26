@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 16px 'Roboto', sans-serif;
+}
+
+
+.botao {
+    display: inline-block;
+    margin-tOP: 1em;
+    padding: 0.5em 1em;
+    background-color: #990000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/* Header */
+header {
+    display: flex;
+    padding: 2em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    color: #ffffff;
+}
+
+header .poster img {
+    width: 350px;
+    border-radius: 15px;
+    display: block;
+}
+
+header .info {
+    margin-top: 150px;
+    margin-left: 2em;
+    padding: 2em;
+    max-width: 800px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+header .info h1 {
+    font-size: 3em;
+}
+header .info .generos {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+header .info p {
+    margin-top: 0.5em;
+    text-align: justify;
+}
+header .info .nota {
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 4px solid #00BB00;
+    margin-top: 0.5em;
+}
+
+
+/* ELENCO */
+.elenco {
+    padding: 2em;
+}
+.elenco .elenco-container {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+.elenco .elenco-container .ator {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05), -4px -4px 10px rgba(0, 0, 0, 0.05);
+}
+.elenco .elenco-container .ator img {
+    width: 160px;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+.elenco .elenco-container .ator .nome {
+    font-weight: 600;
+    margin: 0.75em 1em 0 1em;
+}
+.elenco .elenco-container .ator .personagem {
+    margin: 0em 1em 1.5em 1em;
+}
+
+
+
+/* TEMPORADAS */
+.temporadas {
+    padding: 2em;
+}
+.temporadas .temporadas-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+}
+.temporadas .temporadas-container .temporada {
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05), -4px -4px 10px rgba(0, 0, 0, 0.05);
+}
+.temporadas .temporadas-container .temporada .poster img {
+    width: 150px;
+    display: block;
+    border-radius: 10px 0 0 10px;
+}
+.temporadas .temporadas-container .temporada .info {
+    padding: 1em;
+    padding-right: 2em;
+}
+.temporadas .temporadas-container .temporada .info h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+.temporadas .temporadas-container .temporada .info .subtitulo {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.temporadas .temporadas-container .temporada .info p {
+    text-align: justify;
+    margin-top: 1.5em;
+}
+
+
+
+
+/* EPISODIOS  */
+.episodios {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+.episodios .episodio {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05), -4px -4px 10px rgba(0, 0, 0, 0.05);
+}
+.episodios .episodio .foto {
+    position: relative;
+}
+.episodios .episodio img {
+    width: 260px;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+.episodios .episodio .nota {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0.3em 0.5em;
+    border-radius: 15px;
+}
+.episodios .episodio .nota img {
+    width: 14px;
+    float: left;
+    margin-right: 5px;
+}
