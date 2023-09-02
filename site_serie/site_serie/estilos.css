@@ -22,6 +22,15 @@ body {
     border-radius: 20px;
 }
 
+.botaoHead {
+    display: inline-block;
+    margin-tOP: 1em;
+    padding: 0.5em 1em;
+    background-color: #990000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+}
 
 
 
