@@ -26,3 +26,24 @@ soAceitaPares(10)
     .catch(resposta => console.warn(resposta));
 
 console.log("Depois de testar");
+
+let btn = document.querySelector("#btn");
+
+/*
+// Função normal
+btn.addEventListener("click", clicarBotao);
+
+function clicarBotao(event) {
+    // let alvo = event.target;
+    // let title = alvo.getAttribute("title");
+    // console.log(title);
+    // Forma resumida
+    console.log(event.target.getAttribute("title"));
+}
+*/
+
+// Arrow Function
+// Usa {} para poder fazer a função em mais de uma linha
+btn.addEventListener("click", (event) => {
+    console.log(event.target.getAttribute("title"));
+})
