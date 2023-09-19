@@ -19,7 +19,6 @@ function buscarSerie() {
 }
 
 
-
 function exibeSeries(series) {
     divSeries.innerHTML = "";
     for (let serie of series) {
