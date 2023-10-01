@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: azure;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 20px;
@@ -15,7 +16,7 @@ body {
     border: 2px solid gray;
     padding: 1em;
     justify-content: space-around;
-    background-color: #9fe0d3;
+    background-color: #588157;
 }
 .cabecalho span {
     font-size: 30px;
@@ -26,5 +27,19 @@ body {
     position: relative;
 }
 .select-personalizado select {
-    
+    border-radius: 8px;
+    font-size: 15px;
 }
+
+.paisesContainer{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.topoPaises img{
+    border: 2px solid black;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(0, 0, 0, 0.05);
+    padding: 5px;
+}
+

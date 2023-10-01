@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
+    // Função para percorrer a lista de países vizinhos
+
+
+
     // Função para preencher a caixa de seleção com os nomes dos países
     function preencherListaDePaises(data) {
         // Ordenar os países em ordem alfabética pelo nome comum
@@ -53,15 +57,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Exibir informações do país
                 const html = `
-                    <div class="infoPaises">
-                        <h1>${pais.name.common}</h1>
-                        <img src="${pais.flags.png}" alt="Bandeira de ${pais.name.common}">
-                        <p>Capital: ${pais.capital[0]}</p>
-                        <p>Continente: ${pais.region}</p>
-                        <p>População: ${pais.population.toLocaleString()}</p>
-                        <p>Área: ${pais.area.toLocaleString()} km²</p>
-                        <p>Moedas: ${Object.values(pais.currencies).map(c => c.name).join(', ')}</p>
-                        <p>Idiomas: ${Object.values(pais.languages).join(', ')}</p>
+                    <div class="paisesContainer">
+                        <div class="topoPaises">
+                            <h1>${pais.name.common}</h1>
+                            <img src="${pais.flags.png}" alt="Bandeira de ${pais.name.common}">
+                        </div>
+                        <div class="infoPaises">
+                            <p>Capital: ${pais.capital[0]}</p>
+                            <p>Continente: ${pais.region}</p>
+                            <p>População: ${pais.population.toLocaleString()}</p>
+                            <p>Área: ${pais.area.toLocaleString()} km²</p>
+                            <p>Moedas: ${Object.values(pais.currencies).map(c => c.name).join(', ')}</p>
+                            <p>Idiomas: ${Object.values(pais.languages).join(', ')}</p>
+                        </div>
+                        <div class="fronteiras">
+                            <p>Fronteiras: </p>
+                            <a href=""></a>
+                        </div>
                     </div>
                 `;
 
