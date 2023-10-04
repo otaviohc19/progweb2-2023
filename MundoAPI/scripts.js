@@ -16,10 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Função para percorrer a lista de países vizinhos
-
-
-
     // Função para preencher a caixa de seleção com os nomes dos países
     function preencherListaDePaises(data) {
         // Ordenar os países em ordem alfabética pelo nome comum
@@ -56,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 mundoDiv.innerHTML = "";
 
                 // Exibir informações do país
+                const fronteiras = pais.borders || [];
+                const fronteirasHTML = fronteiras.map(fronteira => `<a href="#" class="fronteiraLink" data-nome="${fronteira}">${fronteira}</a>`).join(', ');
+
                 const html = `
                     <div class="paisesContainer">
                         <div class="topoPaises">
@@ -71,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <p>Idiomas: ${Object.values(pais.languages).join(', ')}</p>
                         </div>
                         <div class="fronteiras">
-                            <p>Fronteiras: </p>
-                            <a href=""></a>
+                            <p>Fronteiras: ${fronteirasHTML}</p>
                         </div>
                     </div>
                 `;
@@ -89,6 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const nomeDoPais = mundoPaises.value;
         if (nomeDoPais) {
             carregaInformacoesDoPais(nomeDoPais);
+        }
+    });
+
+    // Adicionar evento de clique para os links de fronteira
+    mundoDiv.addEventListener('click', function(event) {
+        if (event.target.classList.contains('fronteiraLink')) {
+            event.preventDefault();
+            const nomeDaFronteira = event.target.dataset.nome;
+            mundoPaises.value = nomeDaFronteira;
+            carregaInformacoesDoPais(nomeDaFronteira);
         }
     });
 
