@@ -52,16 +52,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 mundoDiv.innerHTML = "";
 
                 // Exibir informações do país
+                const fronteiras = pais.borders || [];
+                const fronteirasHTML = fronteiras.map(fronteira => `<a href="#" class="fronteiraLink" data-nome="${fronteira}">${fronteira}</a>`).join(', ');
+
                 const html = `
-                    <div class="infoPaises">
-                        <h1>${pais.name.common}</h1>
-                        <img src="${pais.flags.png}" alt="Bandeira de ${pais.name.common}">
-                        <p>Capital: ${pais.capital[0]}</p>
-                        <p>Continente: ${pais.region}</p>
-                        <p>População: ${pais.population.toLocaleString()}</p>
-                        <p>Área: ${pais.area.toLocaleString()} km²</p>
-                        <p>Moedas: ${Object.values(pais.currencies).map(c => c.name).join(', ')}</p>
-                        <p>Idiomas: ${Object.values(pais.languages).join(', ')}</p>
+                    <div class="paisesContainer">
+                        <div class="topoPaises">
+                            <h1>${pais.name.common}</h1>
+                            <img src="${pais.flags.png}" alt="Bandeira de ${pais.name.common}">
+                        </div>
+                        <div class="infoPaises">
+                            <p>Capital: ${pais.capital[0]}</p>
+                            <p>Continente: ${pais.region}</p>
+                            <p>População: ${pais.population.toLocaleString()}</p>
+                            <p>Área: ${pais.area.toLocaleString()} km²</p>
+                            <p>Moedas: ${Object.values(pais.currencies).map(c => c.name).join(', ')}</p>
+                            <p>Idiomas: ${Object.values(pais.languages).join(', ')}</p>
+                        </div>
+                        <div class="fronteiras">
+                            <p>Fronteiras: ${fronteirasHTML}</p>
+                        </div>
                     </div>
                 `;
 
@@ -77,6 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const nomeDoPais = mundoPaises.value;
         if (nomeDoPais) {
             carregaInformacoesDoPais(nomeDoPais);
+        }
+    });
+
+    // Adicionar evento de clique para os links de fronteira
+    mundoDiv.addEventListener('click', function(event) {
+        if (event.target.classList.contains('fronteiraLink')) {
+            event.preventDefault();
+            const nomeDaFronteira = event.target.dataset.nome;
+            mundoPaises.value = nomeDaFronteira;
+            carregaInformacoesDoPais(nomeDaFronteira);
         }
     });
 
