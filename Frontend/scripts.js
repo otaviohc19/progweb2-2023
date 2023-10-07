@@ -1,3 +1,5 @@
+// const { get } = require("https");
+
 let url = 'http://localhost:3000';
 let produtos = [];
 
@@ -13,8 +15,8 @@ function criarProduto(ev) {
     let preco = document.querySelector('#txtPreco');
 
     let produto = {
-        nome,
-        preco
+        nome: nome.value,
+        preco: preco.value
     }
 
     fetch(url + '/produtos', {
@@ -25,8 +27,17 @@ function criarProduto(ev) {
         }
     })
         .then(resp => resp.json())
-        .then(data => alert(data))
+        .then(data => produtoCriado(data))
         .catch(erro => console.error(erro));
+}
+
+function produtoCriado(produto) {
+    // Forma preguiçosa
+    // getProdutos();
+
+    // Economiza recursos
+    produtos.push(produto);
+    mostraProdutos(produtos);
 }
 
 function getProdutos() {
