@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .menu a {
+        @apply text-white font-semibold text-lg uppercase mx-5 hover:text-yellow-400 transition-all duration-300;
+    }
+}
