@@ -82,7 +82,7 @@ export default function CriarConta() {
                 </button>
 
                 <div className="text-right mt-4">
-                    <a href="/" className="text-blue-500 font-semibold">
+                    <a href="/login" className="text-blue-500 font-semibold">
                         Já possui uma conta? Entre
                     </a>
                 </div>

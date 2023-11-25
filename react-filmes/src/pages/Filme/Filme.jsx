@@ -23,13 +23,13 @@ export default function Filme() {
             .then(resp => resp.json())
             .then(data => setFilme(data.results))
             .catch(error => console.error(error));
-    });
+    }, [params.id]);
 
 
     return (
         <div>
             <Menu />
-            <h1>filme {params.id}</h1>     
+             
         </div>
     )
 }
