@@ -52,7 +52,7 @@ export default function Login() {
                 </label>
                 <input 
                     type="email" 
-                    placeholder="email@gmail.com" 
+                    placeholder="exemplo@email.com" 
                     id="txtEmail" 
                     className="block border px-4 py-2 w-full" 
                     value={email}
