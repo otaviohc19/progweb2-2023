@@ -14,8 +14,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Login />} />
-          <Route path='/home' element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/noar' element={<NoAr />} />
           <Route path='/contato' element={<Contato />} />
           <Route path='/filme/:id' element={<Filme />} />
